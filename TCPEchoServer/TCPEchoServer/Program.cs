@@ -10,6 +10,12 @@ namespace TCPEchoServer
     {
         static void Main(string[] args)
         {
+            Server server = new Server();
+            Task.Run(server.Start);
+
+            Console.ReadLine();
+
+            server.Stop();
         }
     }
 }
